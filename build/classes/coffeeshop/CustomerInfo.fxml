@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" styleClass="backgroundColor" stylesheets="@cssfile.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coffeeshop.CustomerInfoController">
+   <children>
+      <TableView fx:id="custTableView" layoutX="158.0" layoutY="164.0" prefHeight="442.0" prefWidth="686.0" style="-fx-background-color: #ffe6e6;">
+        <columns>
+            <TableColumn fx:id="custid" prefWidth="165.0" text="CustomerID" />
+            <TableColumn fx:id="custname" prefWidth="274.0" text="CustomerName" />
+            <TableColumn fx:id="custphone" prefWidth="246.0" text="CustomerPhone" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchid" layoutX="340.0" layoutY="104.0" prefHeight="31.0" prefWidth="321.0" promptText="Search " />
+      <Pane layoutX="-8.0" prefHeight="85.0" prefWidth="1010.0" style="-fx-background-color: #47362e;">
+         <children>
+            <Label layoutX="344.0" layoutY="11.0" prefHeight="63.0" prefWidth="355.0" text="Customer Information" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="35.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="63.0" fitWidth="76.0" layoutX="272.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/personal.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnback" layoutX="933.0" layoutY="17.0" mnemonicParsing="false" onAction="#backAction" style="-fx-background-color: #47362e;">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
